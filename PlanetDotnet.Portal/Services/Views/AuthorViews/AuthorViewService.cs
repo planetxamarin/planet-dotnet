@@ -40,7 +40,7 @@ namespace PlanetDotnet.Portal.Services.Views.AuthorViews
         private static Func<Author, AuthorView> AsAuthorView =>
             author => new AuthorView
             {
-                DisplayName = $"{author.FirstName} {author.LastName}",
+                DisplayName = $"{author.FirstName} {author.LastName}".Trim(),
                 Location = author.StateOrRegion,
                 GravatarUrl = $"//www.gravatar.com/avatar/{author.GravatarHash}.jpg?s=200&d=mm",
                 Position = author.Position,
