@@ -4,11 +4,14 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-namespace PlanetDotnet.Portal.Models.Foundations.GeoPositions
+namespace PlanetDotnet.Portal.Models.Views.MapMarkers
 {
-    public class GeoPosition
+    public class MapMarker
     {
+        public string Id { get; set; }
         public double Lat { get; set; }
-        public double Lon { get; set; }
+        public double Lng { get; set; }
+        public string Name { get; set; }
+        public string Gravatar { get; set; }
     }
 }

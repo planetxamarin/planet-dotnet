@@ -12,6 +12,7 @@ using PlanetDotnet.Portal.Brokers.Apis;
 using PlanetDotnet.Portal.Brokers.Loggings;
 using PlanetDotnet.Portal.Services.Foundations.Authors;
 using PlanetDotnet.Portal.Services.Views.AuthorViews;
+using PlanetDotnet.Portal.Services.Views.MapViews;
 
 namespace PlanetDotnet.Portal.Client.Extensions
 {
@@ -46,6 +47,7 @@ namespace PlanetDotnet.Portal.Client.Extensions
         private static void AddViewServices(this IServiceCollection services)
         {
             services.AddScoped<IAuthorViewService, AuthorViewService>();
+            services.AddScoped<IMapViewService, MapViewService>();
         }
     }
 }

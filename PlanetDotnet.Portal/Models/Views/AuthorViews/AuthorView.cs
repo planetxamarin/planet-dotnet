@@ -11,6 +11,7 @@ namespace PlanetDotnet.Portal.Models.Views.AuthorViews
 {
     public class AuthorView
     {
+        public string Id { get; set; }
         public string DisplayName { get; set; }
         public string Location { get; set; }
         public string ShortBioOrTagLine { get; set; }

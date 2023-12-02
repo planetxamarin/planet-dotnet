@@ -4,11 +4,13 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-namespace PlanetDotnet.Portal.Models.Foundations.GeoPositions
+using Microsoft.AspNetCore.Components;
+
+namespace PlanetDotnet.Portal.Views.Components.ContainerComponents
 {
-    public class GeoPosition
+    public partial class ContainerComponent : ComponentBase
     {
-        public double Lat { get; set; }
-        public double Lon { get; set; }
+        [Parameter]
+        public RenderFragment ChildContent { get; set; }
     }
 }
