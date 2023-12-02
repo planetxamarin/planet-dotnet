@@ -43,20 +43,11 @@ namespace PlanetDotnet.Portal.Services.Views.MapViews
                     Lat = member.Position.Lat,
                     Lng = member.Position.Lon,
                     Name = member.DisplayName,
-                    Gravatar = ExtractHashFromGravatarUrl(member.GravatarUrl),
+                    Gravatar = member.Id, // Id is the garavatar hash
                 });
             }
 
             return markers;
-        }
-
-        private static string ExtractHashFromGravatarUrl(string url)
-        {
-            int hashStartIndex = url.IndexOf("avatar/") + "avatar/".Length;
-
-            int hashEndIndex = url.IndexOf(".jpg", hashStartIndex);
-
-            return url[hashStartIndex..hashEndIndex];
         }
     }
 }

@@ -4,6 +4,7 @@ body, html {
     font-family: "WeblySleek UI","Segoe UI","Helvetica Neue", Arial, sans-serif;
     background-color: #ebf0f1;
     font-size: 14px;
+    padding-top: 30px;
 }
 
 * {
@@ -33,6 +34,11 @@ body, html {
     padding: 0.5em 1em;
     padding-right: 10%;
     padding-left: 10%;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch right to fit the full width */
+    z-index: 1000; /* Ensure it stays on top of other elements */
 }
 
     .top-menu a {
