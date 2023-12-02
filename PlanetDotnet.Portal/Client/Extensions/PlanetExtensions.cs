@@ -8,7 +8,9 @@ using System.Net.Http;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using PlanetDotnet.Portal.Brokers.Apis;
+using PlanetDotnet.Portal.Brokers.Loggings;
 
 namespace PlanetDotnet.Portal.Client.Extensions
 {
@@ -28,6 +30,8 @@ namespace PlanetDotnet.Portal.Client.Extensions
 
         private static void AddBrokers(this IServiceCollection services)
         {
+            services.AddLogging(); 
+            services.AddScoped<ILoggingBroker, LoggingBroker>();
             services.AddScoped<IApiBroker, ApiBroker>();
         }
     }
