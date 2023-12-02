@@ -1,9 +1,17 @@
-<div class="top-row px-4">
-    <div class="container dotnet-container">
-    <div>
-        <img src="/icon-192.png" height="40" class="rounded" />
-        <text style="font-size:large;margin-left:10px"><b>Planet Dotnet</b></text>
+﻿<div class="top-menu">
+    <div class="app-title">
+        <span>Planet .NET</span>
     </div>
-    <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    <button class="hamburger-menu" @onclick="@ToggleMenu">☰</button>
+    <div class="@(isMenuVisible?"mobile-nav-links":"nav-links")">
+        <a href="/">Home</a>
+        <a href="/authors">Authors</a>
+        <a href="/preview"> Preview</a>
+        @if (!isMenuVisible)
+        {
+            <a href="#"><i class="fa fa-rss"></i> Rss Feed</a>
+            <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+        }
     </div>
 </div>

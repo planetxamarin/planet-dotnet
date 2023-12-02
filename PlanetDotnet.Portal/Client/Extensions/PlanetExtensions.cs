@@ -4,8 +4,10 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
+using System.Net.Http;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace PlanetDotnet.Portal.Client.Extensions
 {

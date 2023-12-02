@@ -9,5 +9,12 @@ using Microsoft.AspNetCore.Components;
 namespace PlanetDotnet.Portal.Views.Components.HeaderComponents
 {
     public partial class HeaderComponent : ComponentBase
-    { }
+    {
+        private bool isMenuVisible = false;
+
+        private void ToggleMenu()
+        {
+            isMenuVisible = !isMenuVisible;
+        }
+    }
 }
