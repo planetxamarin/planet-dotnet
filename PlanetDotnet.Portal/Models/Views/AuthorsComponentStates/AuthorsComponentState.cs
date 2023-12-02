@@ -4,14 +4,12 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using PlanetDotnet.Portal.Models.Foundations.Authors;
-
-namespace PlanetDotnet.Portal.Services.Foundations.Authors
+namespace PlanetDotnet.Portal.Models.Views.AuthorsComponentStates
 {
-    public interface IAuthorService
+    public enum AuthorsComponentState
     {
-        ValueTask<List<Author>> RetrieveAllAuthorsAsync();
+        Loading,
+        Content,
+        Error
     }
 }

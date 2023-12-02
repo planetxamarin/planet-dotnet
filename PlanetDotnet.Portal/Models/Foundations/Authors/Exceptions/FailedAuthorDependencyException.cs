@@ -4,14 +4,15 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
+using System;
 using Xeptions;
 
-namespace PlanetDotnet.Portal.Models.Authors.Exceptions
+namespace PlanetDotnet.Portal.Models.Foundations.Authors.Exceptions
 {
-    public class AuthorDependencyException : Xeption
+    public class FailedAuthorDependencyException : Xeption
     {
-        public AuthorDependencyException(Xeption innerException)
-            : base(message: "Author dependency error occurred, contact support.",
+        public FailedAuthorDependencyException(Exception innerException)
+            : base(message: "Failed Author dependency error occurred, contact support.",
                   innerException)
         { }
     }

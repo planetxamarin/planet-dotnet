@@ -5,9 +5,9 @@
 // ---------------------------------------------------------------
 
 using System;
-using PlanetDotnet.Portal.Models.GeoPositions;
+using PlanetDotnet.Portal.Models.Foundations.GeoPositions;
 
-namespace PlanetDotnet.Portal.Models.AuthorViews
+namespace PlanetDotnet.Portal.Models.Views.AuthorViews
 {
     public class AuthorView
     {

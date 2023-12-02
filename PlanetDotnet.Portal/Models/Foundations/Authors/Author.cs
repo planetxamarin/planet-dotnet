@@ -6,9 +6,9 @@
 
 using System;
 using System.Collections.Generic;
-using PlanetDotnet.Portal.Models.GeoPositions;
+using PlanetDotnet.Portal.Models.Foundations.GeoPositions;
 
-namespace PlanetDotnet.Portal.Models.Authors
+namespace PlanetDotnet.Portal.Models.Foundations.Authors
 {
     public class Author
     {

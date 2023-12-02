@@ -5,14 +5,13 @@
 // ---------------------------------------------------------------
 
 using System;
-using Xeptions;
 
-namespace PlanetDotnet.Portal.Models.AuthorViews.Exceptions
+namespace PlanetDotnet.Portal.Models.Views.AuthorViews.Exceptions
 {
-    public class FailedAuthorViewServiceException : Xeption
+    public class AuthorViewDependencyException : Exception
     {
-        public FailedAuthorViewServiceException(Exception innerException)
-            : base(message: "Failed author view service error occurred, please contact support", innerException)
+        public AuthorViewDependencyException(Exception innerException)
+            : base("Author view dependency error occurred, contact support.", innerException)
         { }
     }
 }

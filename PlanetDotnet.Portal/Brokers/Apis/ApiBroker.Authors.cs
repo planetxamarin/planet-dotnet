@@ -6,7 +6,7 @@
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using PlanetDotnet.Portal.Models.Authors;
+using PlanetDotnet.Portal.Models.Foundations.Authors;
 
 namespace PlanetDotnet.Portal.Brokers.Apis
 {

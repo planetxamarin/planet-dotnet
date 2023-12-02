@@ -8,8 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using PlanetDotnet.Portal.Models.Authors;
-using PlanetDotnet.Portal.Models.Authors.Exceptions;
+using PlanetDotnet.Portal.Models.Foundations.Authors;
+using PlanetDotnet.Portal.Models.Foundations.Authors.Exceptions;
 using RESTFulSense.WebAssembly.Exceptions;
 using Xeptions;
 

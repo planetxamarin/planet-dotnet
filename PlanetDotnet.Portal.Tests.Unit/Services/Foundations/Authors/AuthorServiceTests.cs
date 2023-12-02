@@ -12,7 +12,7 @@ using System.Net.Http;
 using Moq;
 using PlanetDotnet.Portal.Brokers.Apis;
 using PlanetDotnet.Portal.Brokers.Loggings;
-using PlanetDotnet.Portal.Models.Authors;
+using PlanetDotnet.Portal.Models.Foundations.Authors;
 using PlanetDotnet.Portal.Services.Foundations.Authors;
 using RESTFulSense.WebAssembly.Exceptions;
 using Tynamix.ObjectFiller;

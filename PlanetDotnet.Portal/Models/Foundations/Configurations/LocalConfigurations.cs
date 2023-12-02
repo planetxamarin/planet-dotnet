@@ -4,10 +4,10 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-namespace PlanetDotnet.Portal.Models.Configurations
+namespace PlanetDotnet.Portal.Models.Foundations.Configurations
 {
-    public class ApiConfigurations
+    public class LocalConfigurations
     {
-        public string Url { get; set; }
+        public ApiConfigurations ApiConfigurations { get; set; }
     }
 }

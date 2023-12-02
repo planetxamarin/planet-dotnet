@@ -4,14 +4,11 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using PlanetDotnet.Portal.Models.Foundations.Authors;
-
-namespace PlanetDotnet.Portal.Services.Foundations.Authors
+namespace PlanetDotnet.Portal.Models.Foundations.GeoPositions
 {
-    public interface IAuthorService
+    public class GeoPosition
     {
-        ValueTask<List<Author>> RetrieveAllAuthorsAsync();
+        public double Lat { get; }
+        public double Lng { get; }
     }
 }

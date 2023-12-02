@@ -1,0 +1,21 @@
+@using PlanetDotnet.Portal.Models.Views.AuthorsComponentStates;
+@using PlanetDotnet.Portal.Views.Bases
+@using PlanetDotnet.Portal.Views.Components.AuthorComponents
+@using PrettyBlazor
+@using System.Drawing;
+
+<Condition Evaluation=@(State == AuthorsComponentState.Error)>
+    <Match>
+        <LabelBase @ref=ErrorLabel
+                   Value=@ErrorMessage
+                   Color="red" />
+    </Match>
+</Condition>
+
+<Condition Evaluation=@(State == AuthorsComponentState.Content)>
+    <Match>
+        <Iterations Items="AuthorViews">
+            <AuthorComponent Author="@context" />
+        </Iterations>
+    </Match>
+</Condition>

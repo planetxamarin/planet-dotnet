@@ -9,8 +9,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
-using PlanetDotnet.Portal.Models.Authors;
-using PlanetDotnet.Portal.Models.AuthorViews;
+using PlanetDotnet.Portal.Models.Foundations.Authors;
+using PlanetDotnet.Portal.Models.Views.AuthorViews;
 using Xunit;
 
 namespace PlanetDotnet.Portal.Tests.Unit.Services.Views.AuthorViews

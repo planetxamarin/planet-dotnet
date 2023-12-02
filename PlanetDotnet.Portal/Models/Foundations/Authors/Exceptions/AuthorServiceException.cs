@@ -4,15 +4,14 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-using System;
 using Xeptions;
 
-namespace PlanetDotnet.Portal.Models.Authors.Exceptions
+namespace PlanetDotnet.Portal.Models.Foundations.Authors.Exceptions
 {
-    public class FailedAuthorServiceException : Xeption
+    public class AuthorServiceException : Xeption
     {
-        public FailedAuthorServiceException(Exception innerException)
-            : base(message: "Failed Author service error occurred, contact support.",
+        public AuthorServiceException(Xeption innerException)
+            : base(message: "Author service error occurred, contact support.",
                   innerException)
         { }
     }

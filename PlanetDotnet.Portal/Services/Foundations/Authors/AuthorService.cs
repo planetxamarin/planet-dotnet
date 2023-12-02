@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using PlanetDotnet.Portal.Brokers.Apis;
 using PlanetDotnet.Portal.Brokers.Loggings;
-using PlanetDotnet.Portal.Models.Authors;
+using PlanetDotnet.Portal.Models.Foundations.Authors;
 
 namespace PlanetDotnet.Portal.Services.Foundations.Authors
 {

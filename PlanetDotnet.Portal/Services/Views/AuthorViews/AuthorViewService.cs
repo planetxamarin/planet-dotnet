@@ -9,8 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PlanetDotnet.Portal.Brokers.Loggings;
-using PlanetDotnet.Portal.Models.Authors;
-using PlanetDotnet.Portal.Models.AuthorViews;
+using PlanetDotnet.Portal.Models.Foundations.Authors;
+using PlanetDotnet.Portal.Models.Views.AuthorViews;
 using PlanetDotnet.Portal.Services.Foundations.Authors;
 
 namespace PlanetDotnet.Portal.Services.Views.AuthorViews

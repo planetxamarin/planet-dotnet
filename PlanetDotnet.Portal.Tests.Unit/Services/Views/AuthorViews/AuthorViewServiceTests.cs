@@ -13,10 +13,10 @@ using System.Text;
 using KellermanSoftware.CompareNetObjects;
 using Moq;
 using PlanetDotnet.Portal.Brokers.Loggings;
-using PlanetDotnet.Portal.Models.Authors;
-using PlanetDotnet.Portal.Models.Authors.Exceptions;
-using PlanetDotnet.Portal.Models.AuthorViews;
-using PlanetDotnet.Portal.Models.GeoPositions;
+using PlanetDotnet.Portal.Models.Foundations.Authors;
+using PlanetDotnet.Portal.Models.Foundations.Authors.Exceptions;
+using PlanetDotnet.Portal.Models.Foundations.GeoPositions;
+using PlanetDotnet.Portal.Models.Views.AuthorViews;
 using PlanetDotnet.Portal.Services.Foundations.Authors;
 using PlanetDotnet.Portal.Services.Views.AuthorViews;
 using Tynamix.ObjectFiller;
@@ -163,7 +163,7 @@ namespace PlanetDotnet.Portal.Tests.Unit.Services.Views.AuthorViews
         {
             int hashStartIndex = url.IndexOf("avatar/") + "avatar/".Length;
 
-            int hashEndIndex = url.IndexOf(".jpg", hashStartIndex); 
+            int hashEndIndex = url.IndexOf(".jpg", hashStartIndex);
 
             return url[hashStartIndex..hashEndIndex];
         }

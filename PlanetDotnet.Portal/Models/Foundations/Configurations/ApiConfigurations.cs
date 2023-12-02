@@ -4,13 +4,10 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-using System;
-
-namespace PlanetDotnet.Portal.Models.AuthorViews.Exceptions
+namespace PlanetDotnet.Portal.Models.Foundations.Configurations
 {
-    public class AuthorViewServiceException : Exception
+    public class ApiConfigurations
     {
-        public AuthorViewServiceException(Exception innerException)
-            : base("Author View service error occured, contact support.", innerException) { }
+        public string Url { get; set; }
     }
 }

@@ -4,11 +4,14 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-namespace PlanetDotnet.Portal.Models.GeoPositions
+using Microsoft.AspNetCore.Components;
+using PlanetDotnet.Portal.Models.Views.AuthorViews;
+
+namespace PlanetDotnet.Portal.Views.Components.AuthorComponents
 {
-    public class GeoPosition
+    public partial class AuthorComponent : ComponentBase
     {
-        public double Lat { get; }
-        public double Lng { get; }
+        [Parameter]
+        public AuthorView Author { get; set; }
     }
 }

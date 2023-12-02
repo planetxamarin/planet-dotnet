@@ -7,9 +7,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using PlanetDotnet.Portal.Models.Authors.Exceptions;
-using PlanetDotnet.Portal.Models.AuthorViews;
-using PlanetDotnet.Portal.Models.AuthorViews.Exceptions;
+using PlanetDotnet.Portal.Models.Foundations.Authors.Exceptions;
+using PlanetDotnet.Portal.Models.Views.AuthorViews;
+using PlanetDotnet.Portal.Models.Views.AuthorViews.Exceptions;
 
 namespace PlanetDotnet.Portal.Services.Views.AuthorViews
 {

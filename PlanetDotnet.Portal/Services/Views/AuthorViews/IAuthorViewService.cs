@@ -6,7 +6,7 @@
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using PlanetDotnet.Portal.Models.AuthorViews;
+using PlanetDotnet.Portal.Models.Views.AuthorViews;
 
 namespace PlanetDotnet.Portal.Services.Views.AuthorViews
 {

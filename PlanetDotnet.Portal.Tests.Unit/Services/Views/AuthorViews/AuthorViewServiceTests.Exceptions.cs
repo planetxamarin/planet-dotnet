@@ -8,8 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Moq;
-using PlanetDotnet.Portal.Models.AuthorViews;
-using PlanetDotnet.Portal.Models.AuthorViews.Exceptions;
+using PlanetDotnet.Portal.Models.Views.AuthorViews;
+using PlanetDotnet.Portal.Models.Views.AuthorViews.Exceptions;
 using Xunit;
 
 namespace PlanetDotnet.Portal.Tests.Unit.Services.Views.AuthorViews
