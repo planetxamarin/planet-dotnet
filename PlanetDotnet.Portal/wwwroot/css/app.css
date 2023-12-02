@@ -1,8 +1,28 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "WeblySleek UI","Segoe UI","Helvetica Neue", Arial, sans-serif;
+    background-color: #ebf0f1;
+    font-size: 14px;
 }
+
+* {
+    scrollbar-color: #512bd4 #ebf0f1;
+}
+
+    *::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #ebf0f1;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #512bd4;
+        border-radius: 20px;
+        border: 3px solid #ebf0f1;
+    }
 
 .top-menu {
     display: flex;
@@ -11,9 +31,13 @@ body, html {
     background-color: #512bd4;
     color: white;
     padding: 0.5em 1em;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 20%;
+    padding-left: 20%;
 }
+
+    .top-menu a {
+        font-size: 18px;
+    }
 
 .app-title {
     font-size: 1.5em;
@@ -66,7 +90,12 @@ body, html {
 }
 
 .body-container {
-    padding-top: 1%;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-top: 2%;
+    padding-right: 20%;
+    padding-left: 20%;
 }
+
+    .body-container hr {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
