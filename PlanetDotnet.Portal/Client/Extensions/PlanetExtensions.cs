@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using PlanetDotnet.Portal.Brokers.Apis;
 using PlanetDotnet.Portal.Brokers.Loggings;
+using PlanetDotnet.Portal.Services.Foundations.Authors;
 
 namespace PlanetDotnet.Portal.Client.Extensions
 {
@@ -23,6 +24,7 @@ namespace PlanetDotnet.Portal.Client.Extensions
 
             builder.Services.AddScoped(sp => new HttpClient());
             builder.Services.AddBrokers();
+            builder.Services.AddFoundationServices();
 
             return builder;
         }
@@ -32,6 +34,11 @@ namespace PlanetDotnet.Portal.Client.Extensions
             services.AddLogging();
             services.AddScoped<ILoggingBroker, LoggingBroker>();
             services.AddScoped<IApiBroker, ApiBroker>();
+        }
+
+        private static void AddFoundationServices(this IServiceCollection services)
+        {
+            services.AddScoped<IAuthorService, AuthorService>();
         }
     }
 }
