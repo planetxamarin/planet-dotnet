@@ -4,8 +4,8 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using PlanetDotnet.Portal.Client.Extensions;
 
 namespace PlanetDotnet.Portal
 {
@@ -14,10 +14,8 @@ namespace PlanetDotnet.Portal
         public static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            builder.RootComponents.Add<App>("#app");
-            builder.RootComponents.Add<HeadOutlet>("head::after");
 
-            builder.Services.AddScoped(sp => new HttpClient());
+            builder.ConfigurePlanetDotnet();
 
             await builder.Build().RunAsync();
         }
