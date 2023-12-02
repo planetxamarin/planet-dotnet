@@ -8,6 +8,7 @@ using System.Net.Http;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using PlanetDotnet.Portal.Brokers.Apis;
 
 namespace PlanetDotnet.Portal.Client.Extensions
 {
@@ -20,8 +21,14 @@ namespace PlanetDotnet.Portal.Client.Extensions
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
             builder.Services.AddScoped(sp => new HttpClient());
+            builder.Services.AddBrokers();
 
             return builder;
+        }
+
+        private static void AddBrokers(this IServiceCollection services)
+        {
+            services.AddScoped<IApiBroker, ApiBroker>();
         }
     }
 }
