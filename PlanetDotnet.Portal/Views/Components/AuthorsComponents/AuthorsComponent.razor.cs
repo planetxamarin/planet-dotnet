@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using PlanetDotnet.Portal.Models.Views.AuthorsComponentStates;
@@ -23,6 +24,7 @@ namespace PlanetDotnet.Portal.Views.Components.AuthorsComponents
         public AuthorsComponentState State { get; set; }
 
         public List<AuthorView> AuthorViews { get; set; }
+        private List<AuthorView> displayAuthorViews;
 
         public string ErrorMessage { get; set; }
 
@@ -32,7 +34,7 @@ namespace PlanetDotnet.Portal.Views.Components.AuthorsComponents
         {
             try
             {
-                this.AuthorViews =
+                this.AuthorViews = this.displayAuthorViews =
                     await this.AuthorViewService.RetrieveAllAuthorViewsAsync();
 
                 this.State = AuthorsComponentState.Content;
@@ -42,6 +44,24 @@ namespace PlanetDotnet.Portal.Views.Components.AuthorsComponents
                 this.ErrorMessage = exception.Message;
                 this.State = AuthorsComponentState.Error;
             }
+        }
+
+        private void SearchTextChanged(ChangeEventArgs args)
+        {
+            var authers = this.AuthorViews;
+
+            var name = args.Value?.ToString().ToLower();
+
+            if (string.IsNullOrWhiteSpace(name))
+                this.displayAuthorViews = authers;
+
+            this.displayAuthorViews = authers.Where(i =>
+                $"{i.DisplayName}{i.ShortBioOrTagLine}"
+                .ToLowerInvariant()
+                .Contains(name))?
+                .ToList();
+
+            StateHasChanged();
         }
     }
 }

@@ -19,7 +19,7 @@
 
         .profileCard .profileCardWrapper .name {
             margin: 10px 0 0 0;
-            color: #b455b6;
+            color: #592fe9;
             font-size: 22px;
         }
 
@@ -44,8 +44,9 @@
             margin: 20px 0 0 0;
         }
 
-    .profileCard .mugShotBorder {
-        background-image: url('../img/card-background.png');
+    .profileCard .mugShotBorder { 
+        background-image: url('card-background-ai.png');
+        /*background-color: #592fe9;*/
         background-size: 140%;
         color: #fff;
         height: 60px;

@@ -31,8 +31,8 @@ body, html {
     background-color: #512bd4;
     color: white;
     padding: 0.5em 1em;
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
     .top-menu a {
@@ -91,8 +91,8 @@ body, html {
 
 .body-container {
     padding-top: 2%;
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-right: 2%;
+    padding-left: 2%;
 }
 
     .body-container hr {

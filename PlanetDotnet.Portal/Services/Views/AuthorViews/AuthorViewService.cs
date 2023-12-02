@@ -44,7 +44,7 @@ namespace PlanetDotnet.Portal.Services.Views.AuthorViews
                 Location = author.StateOrRegion,
                 GravatarUrl = $"//www.gravatar.com/avatar/{author.GravatarHash}.jpg?s=200&d=mm",
                 Position = author.Position,
-                ShortBioOrTagLine = author.ShortBioOrTagLine,
+                ShortBioOrTagLine = author.TagOrBio,
                 TwitterHandle = author.TwitterHandle,
                 WebSite = author.WebSite
             };

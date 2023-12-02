@@ -14,8 +14,21 @@
 
 <Condition Evaluation=@(State == AuthorsComponentState.Content)>
     <Match>
-        <Iterations Items="AuthorViews">
+
+        <div class="alert alert-info text-center" role="alert">
+            <i class="fa fa-info-circle"></i> Order is random. Refresh to shuffle.
+        </div>
+
+        <div class="text-center col-md-12">
+            <input @oninput=@SearchTextChanged
+                   type="text"
+                   class="live-search-box form-control text-center"
+                   placeholder="Search on author name and tag..." />
+        </div>
+
+        <Iterations Items="displayAuthorViews">
             <AuthorComponent Author="@context" />
         </Iterations>
+        <FooterBase />
     </Match>
 </Condition>

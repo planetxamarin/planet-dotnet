@@ -31,7 +31,7 @@ namespace PlanetDotnet.Portal.Tests.Unit.Services.Views.AuthorViews
                         FirstName = property.DisplayName,
                         LastName = "",
                         StateOrRegion = property.Location,
-                        ShortBioOrTagLine = property.ShortBioOrTagLine,
+                        TagOrBio = property.ShortBioOrTagLine,
                         WebSite = property.WebSite,
                         TwitterHandle = property.TwitterHandle,
                         GravatarHash = ExtractHashFromGravatarUrl(property.GravatarUrl),
