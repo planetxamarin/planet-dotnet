@@ -1,7 +1,12 @@
-﻿@using PlanetDotnet.Portal.Views.Components.HeaderComponents
+﻿@using PlanetDotnet.Portal.Views.Bases
+@using PlanetDotnet.Portal.Views.Components.HeaderComponents
 @inherits LayoutComponentBase
 
 <HeaderComponent />
 <div class="container body-container">
-    @Body
+    <div class="container">
+        @Body
+    </div>
+
+    <FooterBase />
 </div>

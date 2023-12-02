@@ -26,9 +26,10 @@
                    placeholder="Search on author name and tag..." />
         </div>
 
-        <Iterations Items="displayAuthorViews">
-            <AuthorComponent Author="@context" />
-        </Iterations>
-        <FooterBase />
+        <div class="row">
+            <Iterations Items="displayAuthorViews">
+                <AuthorComponent Author="@context" />
+            </Iterations>
+        </div>
     </Match>
 </Condition>
