@@ -34,7 +34,11 @@ namespace PlanetDotnet.Portal.Services.Views.AuthorViews
             List<Author> authors =
                 await this.authorService.RetrieveAllAuthorsAsync();
 
-            return authors.Select(AsAuthorView).ToList();
+            var random = new Random();
+
+            return authors.Select(AsAuthorView)
+                .OrderBy(r => random.Next())
+                .ToList();
         });
 
         private static Func<Author, AuthorView> AsAuthorView =>

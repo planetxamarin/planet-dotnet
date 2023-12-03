@@ -34,7 +34,7 @@ namespace PlanetDotnet.Portal.Tests.Unit.Services.Views.AuthorViews
                         TagOrBio = property.ShortBioOrTagLine,
                         WebSite = property.WebSite,
                         TwitterHandle = property.TwitterHandle,
-                        GravatarHash = ExtractHashFromGravatarUrl(property.GravatarUrl),
+                        GravatarHash = property.Id,
                         Position = property.Position,
                     }).ToList();
 
@@ -44,6 +44,7 @@ namespace PlanetDotnet.Portal.Tests.Unit.Services.Views.AuthorViews
                 dynamicAuthorViewPropertiesCollection.Select(property =>
                     new AuthorView
                     {
+                        Id = property.Id,
                         DisplayName = property.DisplayName,
                         GravatarUrl = property.GravatarUrl,
                         Location = property.Location,

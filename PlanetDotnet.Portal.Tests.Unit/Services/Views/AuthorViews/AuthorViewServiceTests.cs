@@ -63,14 +63,17 @@ namespace PlanetDotnet.Portal.Tests.Unit.Services.Views.AuthorViews
         {
             GeoPosition randomGeoPostion = GetRandomGeoPosition();
 
+            var gravatarUrl = GenerateRandomGravatarUrl();
+
             return new
             {
+                Id = ExtractHashFromGravatarUrl(gravatarUrl),
                 DisplayName = GetRandomName(),
                 Location = GetRandomString(),
                 ShortBioOrTagLine = GetRandomString(),
                 WebSite = new Uri(GetRandomRoute()),
                 TwitterHandle = GetRandomString(),
-                GravatarUrl = GetRandomRoute(),
+                GravatarUrl = gravatarUrl,
                 Position = randomGeoPostion
             };
         }
@@ -82,15 +85,16 @@ namespace PlanetDotnet.Portal.Tests.Unit.Services.Views.AuthorViews
             return Enumerable.Range(0, randomCount).Select(item =>
             {
                 GeoPosition randomGeoPostion = GetRandomGeoPosition();
-
+                var gravatarUrl = GenerateRandomGravatarUrl();
                 return new
                 {
+                    Id = ExtractHashFromGravatarUrl(gravatarUrl),
                     DisplayName = GetRandomName(),
                     Location = GetRandomString(),
                     ShortBioOrTagLine = GetRandomString(),
                     WebSite = new Uri(GetRandomRoute()),
                     TwitterHandle = GetRandomString(),
-                    GravatarUrl = GenerateRandomGravatarUrl(),
+                    GravatarUrl = gravatarUrl,
                     Position = randomGeoPostion
                 };
 
