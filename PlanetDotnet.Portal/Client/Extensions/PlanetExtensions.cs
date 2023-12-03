@@ -11,8 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using PlanetDotnet.Portal.Brokers.Apis;
 using PlanetDotnet.Portal.Brokers.Loggings;
 using PlanetDotnet.Portal.Services.Foundations.Authors;
+using PlanetDotnet.Portal.Services.Foundations.Previews;
 using PlanetDotnet.Portal.Services.Views.AuthorViews;
 using PlanetDotnet.Portal.Services.Views.MapViews;
+using PlanetDotnet.Portal.Services.Views.PreivewViews;
 
 namespace PlanetDotnet.Portal.Client.Extensions
 {
@@ -42,12 +44,14 @@ namespace PlanetDotnet.Portal.Client.Extensions
         private static void AddFoundationServices(this IServiceCollection services)
         {
             services.AddScoped<IAuthorService, AuthorService>();
+            services.AddScoped<IPreviewService, PreviewService>();
         }
 
         private static void AddViewServices(this IServiceCollection services)
         {
             services.AddScoped<IAuthorViewService, AuthorViewService>();
             services.AddScoped<IMapViewService, MapViewService>();
+            services.AddScoped<IPreviewViewService, PreviewViewService>();
         }
     }
 }

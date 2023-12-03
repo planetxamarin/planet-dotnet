@@ -13,7 +13,7 @@ using PlanetDotnet.Portal.Models.Views.AuthorViews.Exceptions;
 
 namespace PlanetDotnet.Portal.Services.Views.AuthorViews
 {
-    public partial class AuthorViewService : IAuthorViewService
+    public partial class AuthorViewService
     {
 
         private delegate ValueTask<List<AuthorView>> ReturningAuthorViewsFunction();
