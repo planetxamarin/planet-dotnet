@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Humanizer;
 using PlanetDotnet.Portal.Brokers.Loggings;
 using PlanetDotnet.Portal.Models.Foundations.Previews;
 using PlanetDotnet.Portal.Models.Views.PreviewViews;
@@ -34,10 +35,8 @@ namespace PlanetDotnet.Portal.Services.Views.PreivewViews
             List<Preview> previews =
                 await this.previewService.RetrieveAllPreviewsAsync();
 
-            var random = new Random();
-
-            return previews.Select(AsPreviewView)
-                .OrderBy(r => random.Next())
+            return previews.OrderByDescending(preview => preview.PublishDate)
+                .Select(AsPreviewView)
                 .ToList();
         });
 
@@ -48,7 +47,7 @@ namespace PlanetDotnet.Portal.Services.Views.PreivewViews
                 Body = preview.Body,
                 Gravatar = preview.Gravatar,
                 Link = preview.Link,
-                PublishDate = preview.PublishDate,
+                PublishDate = preview.PublishDate.Humanize(),
                 Title = preview.Title
             };
     }

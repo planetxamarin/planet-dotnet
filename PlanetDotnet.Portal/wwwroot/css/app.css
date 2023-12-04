@@ -105,3 +105,33 @@ body, html {
         margin-top: 40px;
         margin-bottom: 50px;
     }
+
+.previewItem {
+    margin-bottom: 30px;
+}
+
+    .previewItem .previewItemTitle a {
+        color: #000;
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+    .previewItem h2.previewItemDate {
+        color: #7d8c8d;
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    .previewItem h2.previewItemByLine {
+        margin: 0;
+    }
+
+    .previewItem .previewItemContent {
+        margin: 20px 0;
+    }
+
+        .previewItem .previewItemContent p {
+            margin: 20px 0;
+        }
+ 

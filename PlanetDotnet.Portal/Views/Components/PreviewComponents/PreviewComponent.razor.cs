@@ -5,15 +5,13 @@
 // ---------------------------------------------------------------
 
 using Microsoft.AspNetCore.Components;
+using PlanetDotnet.Portal.Models.Views.PreviewViews;
 
-namespace PlanetDotnet.Portal.Views.Components.ContainerComponents
+namespace PlanetDotnet.Portal.Views.Components.PreviewComponents
 {
-    public partial class ContainerComponent : ComponentBase
+    public partial class PreviewComponent : ComponentBase
     {
         [Parameter]
-        public RenderFragment ChildContent { get; set; }
-
-        [Parameter]
-        public string Style { get; set; }
+        public PreviewView Preview { get; set; }
     }
 }
