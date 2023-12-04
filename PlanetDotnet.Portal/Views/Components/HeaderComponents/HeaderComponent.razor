@@ -1,0 +1,17 @@
+﻿<div class="top-menu">
+    <div class="app-title"> 
+        <span>PLANET .NET</span>
+    </div>
+    <button class="hamburger-menu" @onclick="@ToggleMenu">☰</button>
+    <div class="@(isMenuVisible?"mobile-nav-links":"nav-links")">
+        <a href="/">Home</a>
+        <a href="/authors">Authors</a>
+        <a href="/preview"> Preview</a>
+        @if (!isMenuVisible)
+        {
+            <a href="#"><i class="fa fa-rss"></i> Rss Feed</a>
+            <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+        }
+    </div>
+</div>

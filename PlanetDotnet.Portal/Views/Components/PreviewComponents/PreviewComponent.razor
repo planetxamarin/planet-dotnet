@@ -1,0 +1,25 @@
+@if (Preview != null)
+{
+    <div class="previewItem">
+        @if (Preview.Gravatar != null)
+        {
+            <img src="@Preview.Gravatar" alt="@Preview.AuthorName avatar" style="float: left; max-width: 65px; margin-right: 10px;border-radius: 50%;" />
+        }
+        <h1 class="previewItemTitle"><a href="@Preview.Link" target="_blank">@((MarkupString)Preview.Title)</a></h1>
+        <h2 class="previewItemDate">
+            @Preview.PublishDate
+            @if (!string.IsNullOrWhiteSpace(Preview.AuthorName))
+            {
+                <text> | </text>
+                @Preview.AuthorName
+            }
+        </h2>
+        <div class="previewItemContent">
+            @((MarkupString)Preview.Body)
+        </div>
+        <div class="previewItemFooter">
+            <a href="@Preview.Link" class="btn btn-primary" target="_blank">View original post</a>
+        </div>
+    </div>
+
+}

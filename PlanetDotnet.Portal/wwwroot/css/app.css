@@ -1,0 +1,137 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "WeblySleek UI","Segoe UI","Helvetica Neue", Arial, sans-serif;
+    background-color: #ebf0f1;
+    font-size: 14px;
+    padding-top: 30px;
+}
+
+* {
+    scrollbar-color: #512bd4 #ebf0f1;
+}
+
+    *::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #ebf0f1;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #512bd4;
+        border-radius: 20px;
+        border: 3px solid #ebf0f1;
+    }
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #512bd4;
+    color: white;
+    padding: 0.5em 1em;
+    padding-right: 10%;
+    padding-left: 10%;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch right to fit the full width */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+    .top-menu a {
+        font-size: 18px;
+    }
+
+.app-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: inline-block;
+}
+
+    .nav-links a:hover {
+        background-color: #592fe9;
+    }
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+}
+
+    .mobile-nav-links a {
+        display: block;
+        padding: 0.5em 1em;
+    }
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .mobile-nav-links {
+        display: flex;
+    }
+}
+
+.body-container {
+    padding-top: 2%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+    .body-container hr {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+.previewItem {
+    margin-bottom: 30px;
+}
+
+    .previewItem .previewItemTitle a {
+        color: #000;
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+    .previewItem h2.previewItemDate {
+        color: #7d8c8d;
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    .previewItem h2.previewItemByLine {
+        margin: 0;
+    }
+
+    .previewItem .previewItemContent {
+        margin: 20px 0;
+    }
+
+        .previewItem .previewItemContent p {
+            margin: 20px 0;
+        }
+ 

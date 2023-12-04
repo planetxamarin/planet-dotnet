@@ -1,0 +1,47 @@
+@using PlanetDotnet.Portal.Models.Views.AuthorsComponentStates;
+@using PlanetDotnet.Portal.Views.Bases
+@using PlanetDotnet.Portal.Views.Components.AuthorComponents
+@using PlanetDotnet.Portal.Views.Components.ContainerComponents
+@using PlanetDotnet.Portal.Views.Components.MapComponents
+@using PrettyBlazor
+@using System.Drawing;
+
+
+<Condition Evaluation=@(State == AuthorsComponentState.Content)>
+    <Match>
+        <MapComponent AuthorViews="@AuthorViews" />
+    </Match>
+</Condition>
+
+<ContainerComponent>
+    <Condition Evaluation=@(State == AuthorsComponentState.Error)>
+        <Match>
+            <LabelBase @ref=ErrorLabel
+                       Value=@ErrorMessage
+                       Color="red" />
+        </Match>
+    </Condition>
+
+    <Condition Evaluation=@(State == AuthorsComponentState.Content)>
+        <Match> 
+
+            <div class="alert alert-info text-center" role="alert">
+                <i class="fa fa-info-circle"></i> Order is random. Refresh to shuffle.
+            </div>
+
+            <div class="text-center col-md-12">
+                <input @oninput=@SearchTextChanged
+                       type="text"
+                       class="live-search-box form-control text-center"
+                       placeholder="Search on author name and tag..." />
+            </div>
+
+            <div class="row">
+                <Iterations Items="displayAuthorViews">
+                    <AuthorComponent Author="@context" />
+                </Iterations>
+            </div>
+        </Match>
+    </Condition>
+
+</ContainerComponent>

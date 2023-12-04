@@ -1,0 +1,26 @@
+@if (Author != null)
+{
+    <div class="col-md-4 profileCard" id="@Author.Id">
+        <img class="mugShot" src="@Author.GravatarUrl" alt="@Author.DisplayName" />
+        <div class="mugShotBorder">
+        </div>
+        <div class="profileCardWrapper">
+
+            <p class="name">@Author.DisplayName</p>
+            <p class="twitter">
+                <a href="https://twitter.com/@Author.TwitterHandle" target="_blank">@@@Author.TwitterHandle</a>
+            </p>
+
+            <p class="description">
+                @Author.ShortBioOrTagLine
+            </p>
+
+            <p class="location">
+                <i class="fa fa-map-marker"></i> @Author.Location
+            </p>
+            <p class="website">
+                <a href="@Author.WebSite" title="@Author.WebSite" target="_blank">@Author.WebSite</a>
+            </p>
+        </div>
+    </div>
+}

@@ -1,0 +1,33 @@
+@using PlanetDotnet.Portal.Models.Views.PreviewsComponentStates;
+@using PlanetDotnet.Portal.Views.Bases
+@using PlanetDotnet.Portal.Views.Components.ContainerComponents
+@using PlanetDotnet.Portal.Views.Components.PreviewComponents
+@using PrettyBlazor
+
+<ContainerComponent Style="padding:30px">
+    <Condition Evaluation=@(State == PreviewsComponentState.Error)>
+            <Match>
+                <LabelBase @ref=ErrorLabel
+                           Value=@ErrorMessage
+                           Color="red" />
+            </Match>
+        </Condition>
+
+        <Condition Evaluation=@(State == PreviewsComponentState.Content)>
+            <Match>
+                <Iterations Items="PreviewViews">
+                    <PreviewComponent Preview="@context" />
+                    <hr />
+                </Iterations>
+            </Match>
+        </Condition>
+
+        <Condition Evaluation=@(State == PreviewsComponentState.Loading)>
+            <Match>
+                <Iterations Items="new int[]{1,2,3,4}">
+                    <SkeletonBase />
+                    <hr />
+                </Iterations>
+            </Match>
+        </Condition> 
+</ContainerComponent>
